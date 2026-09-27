@@ -1,0 +1,59 @@
+#! /opt/homebrew/Cellar/icarus-verilog/13.0/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/va_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/v2009.vpi";
+S_0x147e077e0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0x147e07950 .scope module, "noc_2x2" "noc_2x2" 3 4;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst_n";
+    .port_info 2 /INPUT 1 "packet_valid_i";
+    .port_info 3 /OUTPUT 1 "packet_ready_o";
+    .port_info 4 /INPUT 2 "packet_src_i";
+    .port_info 5 /INPUT 2 "packet_dest_i";
+    .port_info 6 /INPUT 1 "packet_type_i";
+    .port_info 7 /INPUT 3 "packet_length_i";
+    .port_info 8 /INPUT 1 "packet_vc_i";
+    .port_info 9 /INPUT 1 "packet_priority_i";
+    .port_info 10 /INPUT 1 "packet_sop_i";
+    .port_info 11 /INPUT 1 "packet_eop_i";
+    .port_info 12 /INPUT 2 "packet_flit_type_i";
+o0x138040250 .functor BUFZ 1, c4<z>; HiZ drive
+L_0x147e0c300 .functor BUFZ 1, o0x138040250, C4<0>, C4<0>, C4<0>;
+o0x138040010 .functor BUFZ 1, c4<z>; HiZ drive
+v0x147e0c020_0 .net "clk", 0 0, o0x138040010;  0 drivers
+o0x138040040 .functor BUFZ 2, c4<zz>; HiZ drive
+v0x147e1c010_0 .net "packet_dest_i", 1 0, o0x138040040;  0 drivers
+o0x138040070 .functor BUFZ 1, c4<z>; HiZ drive
+v0x147e1c0b0_0 .net "packet_eop_i", 0 0, o0x138040070;  0 drivers
+o0x1380400a0 .functor BUFZ 2, c4<zz>; HiZ drive
+v0x147e1c160_0 .net "packet_flit_type_i", 1 0, o0x1380400a0;  0 drivers
+o0x1380400d0 .functor BUFZ 3, c4<zzz>; HiZ drive
+v0x147e1c200_0 .net "packet_length_i", 2 0, o0x1380400d0;  0 drivers
+o0x138040100 .functor BUFZ 1, c4<z>; HiZ drive
+v0x147e1c2f0_0 .net "packet_priority_i", 0 0, o0x138040100;  0 drivers
+v0x147e1c390_0 .net "packet_ready_o", 0 0, L_0x147e0c300;  1 drivers
+o0x138040160 .functor BUFZ 1, c4<z>; HiZ drive
+v0x147e1c430_0 .net "packet_sop_i", 0 0, o0x138040160;  0 drivers
+o0x138040190 .functor BUFZ 2, c4<zz>; HiZ drive
+v0x147e1c4d0_0 .net "packet_src_i", 1 0, o0x138040190;  0 drivers
+o0x1380401c0 .functor BUFZ 1, c4<z>; HiZ drive
+v0x147e1c5e0_0 .net "packet_type_i", 0 0, o0x1380401c0;  0 drivers
+o0x1380401f0 .functor BUFZ 1, c4<z>; HiZ drive
+v0x147e1c680_0 .net "packet_valid_i", 0 0, o0x1380401f0;  0 drivers
+o0x138040220 .functor BUFZ 1, c4<z>; HiZ drive
+v0x147e1c720_0 .net "packet_vc_i", 0 0, o0x138040220;  0 drivers
+v0x147e1c7c0_0 .net "rst_n", 0 0, o0x138040250;  0 drivers
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/Users/amansingh/Documents/noc_rl_framework/dut/noc_2x2.sv";

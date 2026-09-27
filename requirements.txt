@@ -1,0 +1,7 @@
+cocotb>=1.9
+cocotb-bus
+gymnasium>=0.29
+numpy
+torch
+pytest
+pytest-asyncio

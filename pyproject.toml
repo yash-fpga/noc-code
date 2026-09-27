@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "noc-rl-framework"
+version = "0.1.0"
+description = "Async cocotb/RL integration scaffold for a 2x2 mesh NoC"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "cocotb>=1.9",
+    "cocotb-bus",
+    "gymnasium>=0.29",
+    "numpy",
+    "torch",
+]
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-asyncio"]
+
+[tool.setuptools]
+packages = ["agents", "cocotb_tb", "rl_env", "training", "utils"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]
