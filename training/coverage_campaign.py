@@ -34,7 +34,7 @@ from rl_env.action_decoder import action_to_index
 from rl_env.config import NoCConfig
 from rl_env.noc_async_env import AsyncNoCEnv
 from agents.q_learning_agent import QLearningAgent
-from checkpoint_utils import save_q_agent
+from training.checkpoint_utils import save_q_agent
 
 
 async def run_coverage_campaign(
